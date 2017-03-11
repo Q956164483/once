@@ -16,12 +16,15 @@
         img{
             width:100%;
             height:auto;
+            margin-top:-5em;
+            display: block;
+            position: relative;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <img  alt="" :src="item.src" v-for="(item, index) in imglist">
+        <img  alt="" :src="item.src" :style="{zIndex:200-index}" v-for="(item, index) in imglist">
     </div>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/vue-resource.js"></script>
