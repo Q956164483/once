@@ -20,12 +20,22 @@
             display: block;
             position: relative;
         }
+        audio{
+            position:fixed;
+            z-index:2000;
+            left:0;
+            bottom:0;
+            width:100%;
+            display:block;
+        }
     </style>
 </head>
 <body>
     <div id="app">
         <img  alt="" :src="item.src" :style="{zIndex:200-index}" v-for="(item, index) in imglist">
+        <audio src="music/music.mp3" controls="controls" autoplay preload loop></audio>
     </div>
+    
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/vue-resource.js"></script>
 </body>
